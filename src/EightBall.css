@@ -1,11 +1,16 @@
 .EightBall {
     border: 2px solid blue;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 275px;
 }
 
 .EightBall-button {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background-color: green;
+    font-size: 1.5em;
+    color: white;
 }

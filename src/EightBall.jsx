@@ -1,11 +1,21 @@
 import React, { useState } from 'react'
 import './EightBall.css'
 
-const EightBall = () => {
+const EightBall = ({ answers }) => {
+    const [message, setMessage] = useState("Think of a question")
+    const [background, setBackground] = useState("black")
+    const randomIdx = () => {
+        return Math.floor(Math.random() * answers.length)
+    }
+    const getResponse = () => {
+        const idx = randomIdx()
+        setMessage(answers[idx].msg)
+        setBackground(answers[idx].color)
+        console.log(idx)
+    }
     return (
         <div className="EightBall">
-            <h1>Magic Eight Ball</h1>
-            <button className="EightBall-button">Think of a question</button>
+            <button onClick={getResponse} className="EightBall-button" style={{backgroundColor: background}}>{message}</button>
         </div>
     )
 };
