@@ -9,6 +9,8 @@ function App() {
 
   return (
     <>
+      <h1>The Magic Eight Ball</h1>
+      <h4>Think of a question, then click on the ball below for the answer</h4>
       <EightBall answers={answers}/>  
     </>
   )
